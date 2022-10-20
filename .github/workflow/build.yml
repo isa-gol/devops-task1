@@ -11,10 +11,9 @@ env:
   IMAGE_NAME: task1
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
+    inputs:
+      publish:
 
 permissions:
   contents: read
