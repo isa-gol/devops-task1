@@ -37,15 +37,8 @@ jobs:
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
           arguments: build
-  push:
-    # Ensure test job passes before pushing image.
-    needs: build
 
-    runs-on: ubuntu-latest
-
-    steps:
       - uses: actions/checkout@v2
-
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
