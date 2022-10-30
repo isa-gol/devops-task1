@@ -9,6 +9,6 @@ class HelloController {
 
     @GetMapping("hello")
     fun hello(): String {
-        return "Hello ${Random().nextInt(500)}"
+        return "Hello ${Random().nextInt(1000)}"
     }
 }
